@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload = "docReady()">
+<img id="drogba" src="1920x1080_px_Chelsea_FC_Didier_Drogba-719878%20(1).jpg" style="position:absolute;left:500px;top:100px;" height="200" width="300"/>
+<script>
+    function len () {
+        let element = document.getElementById("drogba");
+        element.style.top = parseInt(element.style.top) - 80 + 'px';
+    }
+    function xuong (){
+        let element = document.getElementById("drogba");
+        element.style.top = parseInt(element.style.top) + 80 + 'px';
+    }
+    function phai() {
+        let element = document.getElementById("drogba");
+        element.style.left = parseInt(element.style.left) - 80 +'px';
+    }
+    function trai (){
+        let element = document.getElementById("drogba");
+        element.style.left = parseInt(element.style.left) + 80 +'px';
+    }
+    function thuchiendichuyen(evt) {
+        switch (evt.keyCode){
+            case 87 :
+            len();
+            break ;
+            case 83 :
+                xuong();
+                break ;
+            case 65 :
+                trai() ;
+                break ;
+            case 68 :
+                phai() ;
+                break ;
+            default:
+
+        }
+    }
+    function docReady() {
+        window.addEventListener('keydown', thuchiendichuyen);
+    }
+
+</script>
+</body>
+</html>
